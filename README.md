@@ -19,4 +19,4 @@ Fazer um sistema de controle de estoque. Tendo em vista as tabelas:
 Fazer o download do wordpress: https://wordpress.org/download/. Criar um CRUD no wordpress, utilizando um postType para cada modelo, ou seja, um postType com um customFields para Produto, Cliente, Pedido.Colocar o projeto em seu github, e mandar o link para sua consultoria!
 
 ### Observações
-Como informado à consultoria, possuo mais experiência em desenvolvimento em plataforma Windows, mais especificamente .NET. Portanto, este teste foi realizado nesta linguagem. Espero que isso não seja um problema, uma vez que acredito que a estrutura de um CRUD é a mesma em todas as ocasiões.
+Possuo mais experiência em desenvolvimento em plataforma Windows, mais especificamente .NET. Portanto, este teste foi realizado nesta linguagem. Espero que isso não seja um problema, uma vez que acredito que a estrutura de um CRUD é a mesma em todas as ocasiões.
