@@ -1,0 +1,969 @@
+/*
+Theme Name: Quatro Rodas
+Author: Rafael Mazzo
+Author URI: http://www.rafaelmazzo.com.br/
+Description: Este tema foi desenvolvido para o teste front-end da Editora Abril. Layout responsivo.
+Version: 1.0
+Text Domain: rafaelmazzo
+*/
+/**
+* == ÍNDICE ==
+*
+* 1.0 AJUSTE PADRÃO
+* 2.0 NAVEGAÇÃO
+* 	2.1 Mega Menu
+*	2.2 Sec Nav
+* 	2.3 Page Scroll effect
+* 3.0 CONTEÚDO PRINCIPAL
+* 4.0 PÁGINA POST
+* 5.0 CONTEÚDO SECUNDÁRIO
+* 6.0 MEDIA QUERY 320 TO 768
+* 7.0 MEDIA QUERY MIN 992px
+* 8.0 MEDIA QUERY MIN 1200px E ACIMA
+*/
+
+/* 1.0 AJUSTE PADRÃO
+========================================================================== */
+/* FONTE DOSIS */
+
+@import url(https://fonts.googleapis.com/css?family=Dosis);
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+    font-family: 'Dosis', sans-serif;
+}
+body {
+    background: #e6e6e6;
+}
+.container {
+    margin: 0 auto;
+    position: relative;
+}
+h1,
+h2,
+h3 {
+    text-transform: uppercase;
+}
+a,
+a:hover,
+a:active a:visited {
+    text-decoration: none;
+    border: none;
+}
+.clear {
+    clear: both;
+}
+.AdCabecalho730 {
+    width: 729px;
+    height: 91px;
+    margin: 0 auto;
+}
+.AdCabecalho300 {
+    width: 300px;
+    height: 48px;
+    margin: 0 auto;
+}
+/* 2.0 NAVEGAÇÃO
+========================================================================== */
+
+#mainNav {
+    background: #ed1c24;
+    position: fixed;
+    width: 100%;
+    top: .1px;
+    -webkit-transition: all .3s ease-in-out;
+    -moz-transition: all .3s ease-in-out;
+    -o-transition: all .3s ease-in-out;
+    -ms-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+#navPrincipal {
+    margin: 0 auto;
+}
+.scrollMenuLink {
+    display: none!important;
+}
+ul#MenuPrincipal li a {
+    color: #FFF;
+    height: 40px;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    -webkit-transition: color 0.2s linear, background 0.2s linear;
+    -moz-transition: color 0.2s linear, background 0.2s linear;
+    -o-transition: color 0.2s linear, background 0.2s linear;
+    transition: color 0.2s linear, background 0.2s linear;
+}
+ul#MenuPrincipal li:hover > a {
+    background: #242424;
+}
+ul#MenuPrincipal .menuInputBusca {
+    background: url('img/bgMenuBusca.png') 130px center no-repeat #FFF;
+    padding: 3px;
+    height: 30px;
+    width: 150px;
+    margin: 20px 0 0 10px;
+}
+ul#MenuPrincipal .menuInputBusca input {
+    padding: 7px;
+    width: 110px;
+    border: 0;
+}
+/* 2.1 Mega Menu
+========================================================================== */
+
+.containerMegaMenu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    z-index: 99999;
+    background: #242424;
+    -webkit-transition: opacity 0.2s linear, visibility 0.2s linear;
+    -moz-transition: opacity 0.2s linear, visibility 0.2s linear;
+    -o-transition: opacity 0.2s linear, visibility 0.2s linear;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+    border-bottom: 3px solid #ed1c24;
+}
+.containerMegaMenu .navLateralMegaMenu {
+    float: left;
+    background: #474747;
+    font-size: 14px;
+}
+ul#MenuPrincipal li .containerMegaMenu .navLateralMegaMenu a {
+    display: list-item;
+    background: #474747;
+    text-transform: inherit;
+    text-align: right;
+}
+ul#MenuPrincipal li .containerMegaMenu .navLateralMegaMenu a:hover {
+    background: #242424;
+}
+.contentMegaMenu {
+    margin: 0 auto;
+    float: left;
+}
+.boxMegaMenu {
+    float: left;
+    color: #fff;
+}
+.boxMegaMenu p {
+    color: #ed1c24;
+    font-weight: normal;
+    display: none;
+}
+.boxMegaMenu ul li {
+    padding: 0 !important;
+    margin: 0;
+}
+.boxMegaMenu ul li a {
+    color: #fff !important;
+    text-transform: inherit !important;
+    font-size: 15px;
+}
+.boxMegaMenu ul li a:hover {
+    background: #474747 !important;
+}
+.boxMegaMenu .boxCarros img,
+.boxCarros h3,
+.boxCarros p {
+    cursor: pointer;
+}
+/* 2.2 Sec Nav
+========================================================================== */
+
+#secNav {
+    padding: 0;
+    background: #242424;
+}
+#navSegundaria ul {
+    margin: 0;
+    padding: 0;
+}
+#navSegundaria ul li {
+    float: left;
+    margin: 0 10px;
+    list-style-type: none;
+    font-size: 12px;
+}
+#navSegundaria ul li a {
+    color: #FFF;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    -webkit-transition: color 0.2s linear, background 0.2s linear;
+    -moz-transition: color 0.2s linear, background 0.2s linear;
+    -o-transition: color 0.2s linear, background 0.2s linear;
+    transition: color 0.2s linear, background 0.2s linear;
+}
+#navSegundaria ul li a:hover {
+    background: #474747;
+}
+#navSegundaria ul .maisAcessadosMenu {
+    background: url('img/bgMaisAcessados.png') center right no-repeat #d41f1f;
+    text-transform: uppercase;
+    color: #fff;
+}
+/* 2.3 Page Scroll effect
+========================================================================== */
+
+.scrollDownMenu {
+    position: fixed;
+    top: 0!important;
+    z-index: 10;
+}
+.scrollDownMenu #mainNav {
+    height: 50px;
+}
+.scrollDownMenu #secNav {
+    display: none;
+}
+.scrollDownMenu #mainNav #logoQuatroRodas {
+    margin: 5px 0 0 20px;
+}
+.scrollDownMenu ul#MenuPrincipal {
+    margin-right: 20px;
+}
+.scrollDownMenu ul#MenuPrincipal li a {
+    padding: 10px 15px 0px 15px;
+}
+.scrollDownMenu ul#MenuPrincipal .scrollMenuLink {
+    display: inline!important;
+}
+.scrollDownMenu ul#MenuPrincipal .menuInputBusca {
+    width: 120px;
+    background-position: center right;
+    margin: 6px 0 0 10px;
+}
+.scrollDownMenu ul#MenuPrincipal .menuInputBusca input {
+    width: 90px;
+}
+/* 3.0 CONTEÚDO PRINCIPAL
+========================================================================== */
+
+#MainContent {
+    background: #222222;
+}
+.boxDestaqueBig,
+.boxDestaqueSmall {
+    float: left;
+}
+.boxDestaqueSmall {
+    position: relative;
+}
+.destaque_img {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+}
+.destaque_img img {
+    width: 100%;
+    -webkit-transition: all .5s ease;
+    /* Safari and Chrome */
+    
+    -moz-transition: all .5s ease;
+    /* Firefox */
+    
+    -ms-transition: all .5s ease;
+    /* IE 9 */
+    
+    -o-transition: all .5s ease;
+    /* Opera */
+    
+    transition: all .5s ease;
+}
+.destaque_img:hover img {
+    -webkit-transform: scale(1.1);
+    /* Safari and Chrome */
+    
+    -moz-transform: scale(1.1);
+    /* Firefox */
+    
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    
+    -o-transform: scale(1.1);
+    /* Opera */
+    
+    transform: scale(1.1);
+}
+.contentBoxDestaque {
+    padding: 20px;
+    text-align: right;
+}
+.noPost {
+    width: 90%!important;
+    padding: 20px;
+}
+.boxDestaqueBig .contentBoxDestaque h3,
+.noPost h3,
+.noPost p,
+.noPost a {
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    line-height: normal;
+}
+.noPost a {
+    text-decoration: underline;
+}
+.boxDestaqueBig span,
+.boxDestaqueSmall span {
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: url(img/redDot.gif) left center no-repeat;
+    padding-left: 15px;
+}
+.boxDestaqueBig .redFeaturespan,
+.boxDestaqueSmall .redFeaturespan {
+    background: #ed1c24;
+    padding-left: 0;
+}
+/* 4.0 PÁGINA POST
+========================================================================== */
+
+#PostContent {
+    height: auto;
+    background: #222222;
+    padding: 20px;
+}
+#PostContent .destaque_img {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+}
+#PostContent .destaque_img img {
+    width: 100%;
+    position: absolute;
+    bottom: -120%;
+    left: 0;
+}
+#PostContent .boxDestaqueSmall {
+    width: 100%;
+    float: none;
+}
+#PostContent .contentBoxDestaque {
+    position: relative;
+    padding: 20px;
+    text-align: inherit;
+}
+#PostContent .contentBoxDestaque p {
+    color: #ccc;
+}
+#PostContent p img {
+    width: inherit;
+    max-width: 100%;
+    height: auto;
+}
+#PostContent h1, #PostContent h2, #PostContent h3{
+	color:#FFF;
+}
+/* 5.0 CONTEÚDO SECUNDÁRIO
+========================================================================== */
+
+#SecondaryContent {
+    clear: both;
+}
+.box-md-4 {
+    float: left;
+    overflow: hidden;
+}
+.contentBox h3 {
+    margin: 0;
+    padding: 0;
+    margin-top: 10px;
+}
+.contentBox p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+/* 6.0 MEDIA QUERY 320 TO 768
+========================================================================== */
+
+@media (min-width: 320px) and (max-width: 768px) {
+    .container {
+        width: 100%;
+    }
+    .scrollDownMenu {
+        width: 97.5%;
+    }
+    #googleAdCabecalho {
+        width: 100%;
+        padding: 0px;
+    }
+    .AdCabecalho730,
+    #secNav,
+    ul#MenuPrincipal .menuInputBusca,
+    #GoogleAdContent {
+        display: none;
+    }
+    .AdCabecalho300,
+    #OpenCloseMenu {
+        visibility: visible;
+    }
+    #mainNav {
+        height: 65px;
+        z-index: 1000;
+    }
+    #logoQuatroRodas {
+        margin: 18px;
+        width: 125px;
+    }
+    ul#MenuPrincipal {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+        display: none;
+        z-index: 1000;
+    }
+    ul#MenuPrincipal li {
+        display: block;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        float: none;
+        background: #d41f1f;
+        height: 61px;
+    }
+    ul#MenuPrincipal li a {
+        padding: 20px 0 0 10px;
+        font-size: 14px;
+        border-bottom: 1px solid #c21c1c;
+    }
+    #OpenCloseMenu {
+        float: right;
+        width: 60px;
+        height: 65px;
+        background: yellow;
+        margin-right: 0;
+        background: #d41f1f;
+    }
+    #OpenCloseMenu a {
+        display: block;
+        width: 20px;
+        height: 20px;
+        margin: 20px 0 0 20px;
+        text-indent: -90000px;
+    }
+    #OpenCloseMenu .AbrirMenu {
+        background: url('img/abrirMenu.png')center center no-repeat;
+    }
+    #OpenCloseMenu .FecharMenu {
+        background: url('img/fecharMenu.png')center center no-repeat;
+    }
+    #secNav {
+        display: none;
+    }
+    /* PAGE SCROLL */
+    
+    .scrollDownMenu {
+        position: fixed;
+        top: 0!important;
+        z-index: 10;
+    }
+    .scrollDownMenu #mainNav {
+        height: 65px;
+    }
+    .scrollDownMenu #mainNav #logoQuatroRodas {
+        margin: 15px 0 0 20px;
+    }
+    .scrollDownMenu ul#MenuPrincipal {
+        margin-right: 20px;
+        margin-top: 21px;
+    }
+    .scrollDownMenu ul#MenuPrincipal li a {
+        padding: 15px 7px 0px 7px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .scrollMenuLink {
+        display: none!important;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca {
+        width: 120px;
+        background-position: center right;
+        margin: 6px 0 0 10px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca input {
+        width: 90px;
+    }
+    #MainContent {
+        width: 100%;
+    }
+    .boxDestaqueBig {
+        width: 100%;
+        position: relative;
+    }
+    .boxDestaqueSmall {
+        width: 100%;
+    }
+    .contentBoxDestaque {
+        padding: 20px;
+        bottom: 0;
+        right: 0;
+        text-align: right;
+        position: absolute;
+    }
+    .boxDestaqueBig .contentBoxDestaque h3, .boxDestaqueSmall .contentBoxDestaque h3 {
+        font-size: 28px;
+		color: #fff;
+		margin:0;
+		padding:0;
+		line-height:normal;
+    }    
+    #SecondaryContent {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .box-md-4 {
+        width: 80%;
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 320px;
+        margin: 20px 10%;
+    }
+    .contentBox {
+        padding: 10px;
+        height: 100%;
+        position: relative;
+    }
+    .contentBox img {
+        width: 100%;
+    }
+    .contentBox a {
+        display: block;
+        position: absolute;
+        bottom: 20px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ed1c24;
+        text-transform: uppercase;
+    }
+    /*POST CONTENT*/
+    
+    #PostContent .destaque_img {
+        display: none;
+    }
+    #PostContent .destaque_img img {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+    }
+}
+/* 7.0 MEDIA QUERY MIN 992px
+========================================================================== */
+
+@media (min-width: 992px) {
+    .container,
+    .scrollDownMenu {
+        width: 970px;
+    }
+    #googleAdCabecalho {
+        width: 100%;
+        padding: 20px;
+    }
+    .AdCabecalho300,
+    #OpenCloseMenu {
+        display: none;
+    }
+    #mainNav {
+        height: 80px;
+        position: relative;
+        visibility: visible;
+    }
+    #logoQuatroRodas {
+        float: left;
+        margin: 20px 0 20px 10px;
+        width: 150px;
+    }
+    ul#MenuPrincipal {
+        float: right;
+        padding: 0;
+        margin: 0 10px 0 auto;
+        display: block;
+    }
+    ul#MenuPrincipal li {
+        display: inline;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    ul#MenuPrincipal li a {
+        padding: 30px 10px 10px 10px;
+        font-size: 14px;
+    }
+    #secNav {
+        width: 100%;
+        padding: 0;
+    }
+    #navSegundaria ul {
+        margin: 0;
+        padding: 0;
+    }
+    #navSegundaria ul li {
+        margin: 0 10px;
+    }
+    #navSegundaria ul li a {
+        padding: 6px 0;
+        margin: 0 2px;
+        font-size: 12px;
+    }
+    #navSegundaria ul .maisAcessadosMenu {
+        padding: 5px 10px;
+        width: 110px;
+        margin: 0;
+        padding-left: 15px;
+    }
+    ul#MenuPrincipal li:hover > .containerMegaMenu {
+        visibility: visible;
+        opacity: 1;
+    }
+    .containerMegaMenu {
+        width: 100%;
+        min-height: 160px;
+    }
+    .containerMegaMenu .navLateralMegaMenu {
+        width: 13%;
+        padding: 20px 0;
+        font-size: 14px;
+        min-height: 400px;
+    }
+    .containerMegaMenu .navMegaMenuCarros {
+        min-height: 200px;
+    }
+    ul#MenuPrincipal li .containerMegaMenu .navLateralMegaMenu a {
+        padding: 7px 10px;
+        height: 20px;
+        font-size: 11px;
+    }
+    .contentMegaMenu {
+        width: 84.8%;
+        padding: 20px 10px;
+    }
+    .boxMegaMenu {
+        width: 30%;
+        height: 180px;
+        margin: 10px;
+    }
+    .boxMegaMenu img {
+        width: 100%;
+    }
+    .boxMegaMenu ul li a {
+        padding: 10px !important;
+        height: 25px !important;
+    }
+    .boxMegaMenu ul {
+        padding: 0;
+    }
+    .boxLinksCarros {
+        width: 17%;
+    }
+    .boxLinksCarros ul li a {
+        background: none;
+        padding: 7px 15px;
+        color: #616161;
+        text-decoration: none;
+        border: 0 none;
+        float: left;
+        clear: both;
+        width: 150px;
+    }
+    /* PAGE SCROLL */
+    
+    .scrollDownMenu {
+        position: fixed;
+        top: 0!important;
+        z-index: 10;
+    }
+    .scrollDownMenu #mainNav {
+        height: 50px;
+    }
+    .scrollDownMenu #mainNav #logoQuatroRodas {
+        margin: 5px 0 0 20px;
+    }
+    .scrollDownMenu ul#MenuPrincipal {
+        margin-right: 20px;
+    }
+    .scrollDownMenu ul#MenuPrincipal li a {
+        padding: 15px 7px 0px 7px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .scrollMenuLink {
+        display: inline!important;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca {
+        width: 120px;
+        background-position: center right;
+        margin: 6px 0 0 10px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca input {
+        width: 90px;
+    }
+    #MainContent {
+        width: 100%;
+        height: 370px;
+    }
+    .boxDestaqueBig {
+        width: 46%;
+        height: 100%;
+        position: relative;
+    }
+    .boxDestaqueSmall {
+        width: 27%;
+        height: 50%;
+    }
+    .boxDestaqueBig img,
+    .boxDestaqueSmall img {
+        width: 100%;
+    }    
+    .contentBoxDestaque {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .boxDestaqueBig .contentBoxDestaque h3 {
+        font-size: 22px;
+    }
+    .boxDestaqueSmall .contentBoxDestaque h3 {
+        font-size: 22px;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        line-height: normal;
+    }
+    #SecondaryContent {
+        width: 100%;
+        margin-top: 30px;
+    }
+    .box-md-4 {
+        width: 50%;
+        padding-right: 0px;
+        padding-left: 0px;
+        height: 420px;
+        margin: 20px 0;
+    }
+    .contentBox {
+        padding: 10px;
+        height: 100%;
+        position: relative;
+    }
+    .contentBox img {
+        width: 100%;
+    }
+    .contentBox a {
+        display: block;
+        position: absolute;
+        top: 400px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ed1c24;
+        text-transform: uppercase;
+    }
+}
+/* 8.0 MEDIA QUERY MIN 1200px E ACIMA
+========================================================================== */
+
+@media (min-width: 1200px) {
+    .AdCabecalho300,
+    #OpenCloseMenu {
+        display: none;
+    }
+    .container,
+    .scrollDownMenu {
+        width: 1320px;
+    }
+    #googleAdCabecalho {
+        width: 100%;
+        padding: 20px;
+    }
+    #mainNav {
+        height: 80px;
+        position: relative;
+    }
+    #logoQuatroRodas {
+        float: left;
+        margin: 20px 0 0 20px;
+    }
+    ul#MenuPrincipal {
+        display: block;
+        height: 80px;
+        margin: 0;
+        float: right;
+        margin-right: 80px;
+    }
+    ul#MenuPrincipal li {
+        display: inline;
+        font-size: 12px;
+        font-weight: bold;
+        margin: 0;
+        padding: 0;
+        float: left;
+    }
+    ul#MenuPrincipal li a {
+        padding: 30px 15px 10px 15px;
+        font-size: 18px;
+    }
+    ul#MenuPrincipal li:hover > .containerMegaMenu {
+        visibility: visible;
+        opacity: 1;
+    }
+    .containerMegaMenu {
+        width: 100%;
+        min-height: 160px;
+    }
+    .containerMegaMenu .navLateralMegaMenu {
+        width: 13%;
+        padding: 25px 0;
+        font-size: 14px;
+        min-height: 100px;
+    }
+    .containerMegaMenu .navMegaMenuCarros {
+        min-height: 170px;
+    }
+    ul#MenuPrincipal li .containerMegaMenu .navLateralMegaMenu a {
+        padding: 7px 15px;
+        height: 20px;
+    }
+    .contentMegaMenu {
+        width: 84.7%;
+        padding-left: 20px;
+    }
+    .boxMegaMenu {
+        width: 200px;
+        margin: 0 10px;
+    }
+    .boxMegaMenu ul li a {
+        padding: 10px !important;
+        height: 25px !important;
+    }
+    .boxLinksCarros ul li a {
+        background: none;
+        padding: 7px 15px;
+        color: #616161;
+        text-decoration: none;
+        border: 0 none;
+        float: left;
+        clear: both;
+        width: 150px;
+    }
+    #secNav {
+        width: 100%;
+        height: 28px;
+        padding: 0;
+    }
+    #navSegundaria ul {
+        margin: 0;
+        padding: 0;
+    }
+    #navSegundaria ul li {
+        margin: 0 10px;
+    }
+    #navSegundaria ul li a {
+        padding: 6px 0;
+        margin: 0 10px;
+    }
+    #navSegundaria ul .maisAcessadosMenu {
+        padding: 5px 10px;
+        width: 110px;
+        margin: 0;
+        padding-left: 15px;
+    }
+    /* PAGE SCROLL */
+    
+    .scrollDownMenu {
+        position: fixed;
+        top: 0!important;
+        z-index: 10;
+    }
+    .scrollDownMenu #mainNav {
+        height: 50px;
+    }
+    .scrollDownMenu #mainNav #logoQuatroRodas {
+        margin: 5px 0 0 20px;
+    }
+    .scrollDownMenu ul#MenuPrincipal {
+        margin-right: 20px;
+    }
+    .scrollDownMenu ul#MenuPrincipal li a {
+        padding: 10px 15px 0px 15px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .scrollMenuLink {
+        display: inline!important;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca {
+        width: 120px;
+        background-position: center right;
+        margin: 6px 0 0 10px;
+    }
+    .scrollDownMenu ul#MenuPrincipal .menuInputBusca input {
+        width: 90px;
+    }
+    #MainContent {
+        width: 100%;
+		height: 500px;
+    }
+    .boxDestaqueBig {
+        width: 46%;
+        height: 100%;
+        position: relative;
+    }
+    .boxDestaqueSmall {
+        width: 27%;
+        height: 50%;
+    }
+    .contentBoxDestaque {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    .boxDestaqueBig .contentBoxDestaque h3 {
+        font-size: 44px;
+    }
+    .boxDestaqueSmall .contentBoxDestaque h3 {
+        font-size: 28px;        
+    }
+    #SecondaryContent {
+        width: 100%;
+        margin-top: 30px;
+        height: 500px;
+    }
+    .box-md-4 {
+        width: 24.1%;
+        padding-right: 0px;
+        padding-left: 0px;
+        margin-left: 15px;
+        margin-top: 0;
+        height: 330px;
+    }
+    .box-md-4:first-child {
+        margin: 0;
+    }
+    .contentBox {
+        padding: 10px;
+        height: 100%;
+        position: relative;
+    }
+    .contentBox a {
+        display: block;
+        position: absolute;
+        top: 310px;
+        text-decoration: none;
+        font-weight: bold;
+        color: #ed1c24;
+        text-transform: uppercase;
+    }
+}

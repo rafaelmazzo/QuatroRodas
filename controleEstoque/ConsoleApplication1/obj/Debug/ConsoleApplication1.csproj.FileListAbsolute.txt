@@ -1,0 +1,7 @@
+c:\users\arthur.sales\documents\visual studio 2013\Projects\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.csprojResolveAssemblyReference.cache
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.pdb
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.exe
+S:\Rafael Mazzo\ConsoleApplication1\ConsoleApplication1\obj\Debug\ConsoleApplication1.pdb
